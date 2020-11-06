@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import { MobileIcon, Nav, NavButton, NavContainer, NavIcon, NavItem, NavLinks, NavLogo, NavMenu } from './Navbar.styles'
+import { MobileIcon, Nav, NavBlur, NavButton, NavContainer, NavIcon, NavItem, NavLinks, NavLogo, NavMenu } from './Navbar.styles'
 import mobileMenu from '../images/icon-hamburger.svg'
 import mobileClose from '../images/icon-close.svg'
 import { ButtonLink } from '../../globalStyles';
-import logo from '../images/logo.svg'
 
 function Navbar() {
     const [click, setClick] = useState(false);
@@ -19,12 +18,13 @@ function Navbar() {
         }
         
     };
-    const closeMobileMenu = () => setClick(false);
+    // const closeMobileMenu = () => setClick(false);
 
     const showButton = () => {
     if (window.innerWidth <= 800) {
         setButton(false);
         } else {
+            document.getElementById('content').style.opacity = '1';
             setButton(true);
         }
     };
@@ -36,8 +36,9 @@ function Navbar() {
 
     return (
         <Nav>
+            <NavBlur/>
             <NavContainer>
-                <NavLogo>
+                <NavLogo to='/'>
                     <NavIcon/>
                 </NavLogo>
                 <NavMenu onClick={handleClick} click={click}>

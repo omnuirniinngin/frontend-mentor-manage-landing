@@ -27,6 +27,7 @@ export const Container = styled.div`
     width: 100%;
     max-width: 1440px;
     margin: 0 auto;
+    padding: 20px;
 
     @media (max-width: 1440px){
         padding: 0 20px;
@@ -35,11 +36,22 @@ export const Container = styled.div`
 
 export const Button = styled.button`
     border-radius: 20px;
-    background: ${colorTheme.primaryBrightRed};
+    background: ${({colorButton}) => (colorButton ? '#fff' : `${colorTheme.primaryBrightRed}`)};
     padding: 10px 20px;
     outline: none;
     border: none;
     cursor: pointer;
+    -webkit-box-shadow: 0px 10px 20px -10px rgba(255,89,0,1);
+    -moz-box-shadow: 0px 10px 20px -10px rgba(255,89,0,1);
+    box-shadow: 0px 10px 20px -10px rgba(255,89,0,1);
+
+    :hover{
+        opacity: .8;
+    }
+    @media (max-width: 800px){
+        /* margin-top: 30px; */
+        margin-top: ${({marginTop}) => (marginTop ? '30px' : 0)};
+    }
 `
 export const ButtonLink = styled(Link)`
     font-family: 'Be Vietnam', sans-serif;
@@ -52,10 +64,11 @@ export const ButtonLink = styled(Link)`
 `
 
 export const SectionSmallText = styled.p`
-    font-size: 1.1rem;
+    font-size: ${({fontSmall}) => (!fontSmall ? '1.1rem' : '1rem')};
     padding-right: ${({padRight}) => (padRight ? '40%' : 0) };
     text-justify: inter-word;
     margin-bottom: 20px;
+    text-align: ${({center}) => (center ? 'center' : 'start')};
     margin-left: ${({left}) => (left ? '5.2rem' : 0)};
     color: ${colorTheme.neutralGrayishBlue};
 
@@ -63,7 +76,7 @@ export const SectionSmallText = styled.p`
         width: 100%;
         padding-right: 0;
         margin-left: 0;
-        text-align: ${({center}) => (center ? 'center' : 'start')};
+        text-align: ${({reCenter}) => (reCenter ? 'center' : 'start')};
     }
     @media (max-width: 500px){
         font-size: 1rem;
@@ -77,16 +90,17 @@ export const SectionBoldTitle = styled.p`
     font-weight: 600;
     padding-top: 13px;
     padding-right: ${({padRight}) => (padRight ? '20%' : 0) };
-    color: ${colorTheme.primaryDarkBlue};
+    color: ${({fontColor}) => (fontColor ? `${colorTheme.primaryDarkBlue}` : '#fff')};
 
     @media (max-width: 800px){
-        text-align: ${({start}) => (start ? 'center' : 'start')};
+        margin-bottom: 0px;
+        padding: 10px;
+        text-align: ${({center}) => (center ? 'center' : 'start')};
         padding-right: 0;
     }
     @media (max-width: 500px){
         font-size: ${({fontBig}) => (fontBig ? '2.5rem' : '1.1rem')};
     }
 `
-
 
 export default GlobalStyle;

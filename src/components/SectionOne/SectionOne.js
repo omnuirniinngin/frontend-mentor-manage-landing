@@ -8,8 +8,6 @@ function SectionOne({
     subHeadline,
     img,
     alt,
-    padRight,
-    center
 }) {
     return (
         <Section>
@@ -19,7 +17,7 @@ function SectionOne({
                         <SectionBigText>
                         {headLine}
                         </SectionBigText>
-                        <SectionSmallText padRight center>
+                        <SectionSmallText padRight reCenter>
                         {subHeadline}
                         </SectionSmallText>
                         <SectionButton>

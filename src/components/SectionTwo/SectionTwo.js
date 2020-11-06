@@ -9,14 +9,13 @@ function SectionTwo({
     content,
     start
 }) {
-
     return (
         <Section>
             <SectionContainer>
                 <SectionColumn margin>
                     <SectionContent>
-                        <SectionBoldTitle start={start} fontBig padRight>{headLine}</SectionBoldTitle>
-                        <SectionSmallText padRight center >{subHeadline}</SectionSmallText>
+                        <SectionBoldTitle start={start} fontBig padRight fontColor>{headLine}</SectionBoldTitle>
+                        <SectionSmallText padRight reCenter >{subHeadline}</SectionSmallText>
                     </SectionContent>
                 </SectionColumn>
                 <SectionColumn>
@@ -27,7 +26,7 @@ function SectionTwo({
                                 <SectionContentNumber>
                                     {id}
                                 </SectionContentNumber>
-                                <SectionBoldTitle>
+                                <SectionBoldTitle background fontColor>
                                     {title}
                                 </SectionBoldTitle>
                             </SectionContentOrder>

@@ -26,6 +26,23 @@ export const NavContainer = styled(Container)`
 
     ${Container};
 `
+
+export const NavBlur = styled.div`
+    height: 90px;
+    top: -30px;
+    left: -20px;
+    right: -20px;
+    position: absolute;
+    overflow: hidden;
+    filter: blur(10%);
+    -webkit-filter: blur(15px);
+    z-index: -1;
+    background-color: ${colorTheme.neutralLightGray};
+    opacity: .9;
+    /* background-color: #2F4F4F; */
+    /* background-size: contain; */
+`
+
 const Svg = styled(Icon)`
     width: 146px; 
     height: 24px;

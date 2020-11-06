@@ -1,7 +1,9 @@
 import React from 'react'
-import {sectionOne, sectionTwo} from './Data'
+import {footer, sectionOne, sectionThree, sectionTwo} from './Data'
 import SectionTwo from "./SectionTwo/SectionTwo";
 import SectionOne from "./SectionOne/SectionOne";
+import SectionThree from './SectionThree/SectionThree';
+import Footer from './Footer/Footer';
 
 function LandingPage() {
     return (
@@ -11,6 +13,8 @@ function LandingPage() {
         }}>
             <SectionOne {...sectionOne}/>
             <SectionTwo {...sectionTwo}/>
+            <SectionThree {...sectionThree}/>
+            <Footer {...footer}/>
         </div>
     )
 }

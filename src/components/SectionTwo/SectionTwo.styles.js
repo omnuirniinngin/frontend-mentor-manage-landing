@@ -3,8 +3,11 @@ import { Container, colorTheme } from '../../globalStyles'
 
 export const Section = styled.div`
     width: 100%;
-    height: 90vh;
+    padding: 100px 0;
 
+    @media (max-width: 800px){
+        padding: 0;
+    }
 `
 export const SectionContainer = styled(Container)`
     display: flex;
@@ -52,24 +55,33 @@ export const SectionContentNumber = styled.span`
 
     @media (max-width: 800px){
         margin-right: 10px;
+
+        ::before{
+            content:'';
+            z-index: -1;
+            position: absolute;
+            width: 100%;
+            height: 2.5rem;
+            background-color: #FFF0EC;
+            display: block;
+        }
     }
 `
 
 export const Background = styled.img`
     position: absolute;
     width: 50%;
-    right: -10%;
-    top: -20%;
+    left: -20%;
     z-index: -1;
+    margin-top: 15%;
 
     @media (max-width: 1440px){
-        top: -5%;
         width: 50%;
-        right: -10%;
     }
     @media (max-width: 800px){
-        top: -10%;
+        left: 0;
+        margin-top: -100%;
+        margin-left: 50%;
         width: 100%;
-        right: -10%;
     }
 `

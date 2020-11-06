@@ -21,7 +21,7 @@ function SectionThree({
     return (
         <Section>
             <SectionContainer>
-                <SectionBoldTitle fontBig fontColor> 
+                <SectionBoldTitle fontBig fontSmall fontColor> 
                     {headLine}
                 </SectionBoldTitle>
 
@@ -64,7 +64,7 @@ function SectionThree({
                                     <Image src={image}/>
                                     <SectionSlideWrapper>
                                         {/* <Image src={image}/> */}
-                                        <SectionBoldTitle fontColor>
+                                        <SectionBoldTitle fontColor >
                                             {name}
                                         </SectionBoldTitle>
                                         <SectionSmallText center fontSmall reCenter>

@@ -14,7 +14,7 @@ function SectionTwo({
             <SectionContainer>
                 <SectionColumn margin>
                     <SectionContent>
-                        <SectionBoldTitle start={start} fontBig padRight fontColor>{headLine}</SectionBoldTitle>
+                        <SectionBoldTitle start={start} fontBig fontSmall padRight fontColor center>{headLine}</SectionBoldTitle>
                         <SectionSmallText padRight reCenter >{subHeadline}</SectionSmallText>
                     </SectionContent>
                 </SectionColumn>
@@ -26,7 +26,7 @@ function SectionTwo({
                                 <SectionContentNumber>
                                     {id}
                                 </SectionContentNumber>
-                                <SectionBoldTitle background fontColor>
+                                <SectionBoldTitle background fontColor >
                                     {title}
                                 </SectionBoldTitle>
                             </SectionContentOrder>

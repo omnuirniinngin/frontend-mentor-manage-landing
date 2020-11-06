@@ -2,6 +2,8 @@ import styled from 'styled-components'
 import { colorTheme, Container, Button } from '../../globalStyles'
 
 export const Section = styled.div`
+    width: 100%;
+    position: relative;
     padding: 100px 0;
     @media (max-width: 800px){
         padding-top: 0;
@@ -21,7 +23,6 @@ export const SectionContainer = styled(Container)`
 export const SectionColumn = styled.div`
     display: flex;
     align-items: center;
-    position: relative;
 `
 export const SectionIntro = styled.div`
     @media (max-width: 800px){
@@ -41,7 +42,7 @@ export const SectionBigText = styled.h1`
         text-align: center;
     }
     @media (max-width: 500px){
-        font-size: 3.5rem;
+        font-size: 3.2rem;
     }
     @media (max-width: 375px){
         font-size: 2rem;
@@ -49,6 +50,9 @@ export const SectionBigText = styled.h1`
 `
 export const Illustration = styled.img`
     width: 100%;
+    @media(max-width: 800px){
+        margin-top: 80px;
+    }
 `
 
 export const SectionButton = styled(Button)`
@@ -56,10 +60,11 @@ export const SectionButton = styled(Button)`
 `
 export const Background = styled.img`
     position: absolute;
-    width: 50%;
-    right: -10%;
-    top: -20%;
+    width: 60%;
+    right: -20%;
+    top: -40%;
     z-index: -1;
+    
 
     @media (max-width: 1440px){
         top: -5%;

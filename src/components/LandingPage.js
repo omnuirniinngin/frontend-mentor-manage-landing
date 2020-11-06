@@ -9,7 +9,9 @@ function LandingPage() {
     return (
         <div style={{
             display: "flex",
-            flexDirection: "column"
+            flexDirection: "column",
+            position: 'relative',
+            overflow: 'hidden'
         }}>
             <SectionOne {...sectionOne}/>
             <SectionTwo {...sectionTwo}/>

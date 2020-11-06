@@ -4,7 +4,6 @@ import { Container, colorTheme } from '../../globalStyles'
 export const Section = styled.div`
     width: 100%;
     padding: 100px 0;
-
     @media (max-width: 800px){
         padding: 0;
     }
@@ -43,6 +42,8 @@ export const SectionContentWrapper = styled.div`
 export const SectionContentOrder = styled.div`
     display: flex;
     align-items: center;
+    display: relative;
+    
 `
 export const SectionContentNumber = styled.span`
     font-size: 1.4rem;
@@ -73,10 +74,11 @@ export const Background = styled.img`
     width: 50%;
     left: -20%;
     z-index: -1;
-    margin-top: 15%;
+    margin-top: 10%;
 
     @media (max-width: 1440px){
         width: 50%;
+        margin-top: 15%;
     }
     @media (max-width: 800px){
         left: 0;

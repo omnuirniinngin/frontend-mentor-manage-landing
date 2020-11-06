@@ -30,9 +30,8 @@ function SectionOne({
                 <SectionColumn>
                     <Illustration src={img} alt={alt}/>
                 </SectionColumn>
-                <Background src={background}/>
             </SectionContainer>
-            
+            <Background src={background}/>
         </Section>
     )
 }

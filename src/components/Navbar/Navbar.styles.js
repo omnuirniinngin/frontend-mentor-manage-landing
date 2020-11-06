@@ -5,7 +5,8 @@ import { Container, colorTheme, Button } from '../../globalStyles'
 import Icon from '../Icon'
 
 export const Nav = styled.div`
-    position: sticky;
+    position: relative;
+    /* overflow: hidden; */
     width: 100%;
     height: 80px;
     top: 0;
@@ -28,19 +29,20 @@ export const NavContainer = styled(Container)`
 `
 
 export const NavBlur = styled.div`
-    height: 90px;
-    top: -30px;
-    left: -20px;
-    right: -20px;
+    width: 100%;
+    height: 70px;
     position: absolute;
-    overflow: hidden;
-    filter: blur(10%);
-    -webkit-filter: blur(15px);
+    top: -50%;
+    transform: scaleY(1.5);
+    filter: blur(20px);
+    -webkit-filter: blur(20px);
     z-index: -1;
     background-color: ${colorTheme.neutralLightGray};
-    opacity: .9;
-    /* background-color: #2F4F4F; */
-    /* background-size: contain; */
+    /* background: rgba(200, 54, 54, 0.5);  */
+
+    @media(max-width: 800px){
+        opacity: 0.7;
+    }
 `
 
 const Svg = styled(Icon)`
@@ -82,8 +84,9 @@ export const NavMenu = styled.ul`
         position: absolute;
         background: #fff;
         border-radius: 10px;
-        top: 100px;
-        left: ${({ click }) => (click ? '5%' : '100%')};
+        top: ${({ click }) => (click ? '100px' : '-250px')};
+        left: 5%;
+        /* left: ${({ click }) => (click ? '5%' : '100%')}; */
         opacity: 1;
         transition: all 0.5s ease;
     }

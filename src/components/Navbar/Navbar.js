@@ -35,52 +35,64 @@ function Navbar() {
     window.addEventListener('resize', showButton);
 
     return (
-        <Nav>
-            <NavBlur/>
-            <NavContainer>
-                <NavLogo to='/'>
-                    <NavIcon/>
-                </NavLogo>
-                <NavMenu onClick={handleClick} click={click}>
-                    <NavItem>
-                        <NavLinks to='/pricing'>
-                            Pricing
-                        </NavLinks>
-                    </NavItem>
-                    <NavItem>
-                        <NavLinks to='/product'>
-                            Product
-                        </NavLinks>
-                    </NavItem>
-                    <NavItem>
-                        <NavLinks to='/about-us'>
-                            About Us
-                        </NavLinks>
-                    </NavItem>
-                    <NavItem>
-                        <NavLinks to='/careers'>
-                            Careers
-                        </NavLinks>
-                    </NavItem>
-                    <NavItem>
-                        <NavLinks to='/community'>
-                            Community
-                        </NavLinks>
-                    </NavItem>
-                </NavMenu>
-                <NavButton>
-                    <ButtonLink to='/get-started'>
-                        Get Started
-                    </ButtonLink>
-                </NavButton>
-                <MobileIcon onClick={handleClick}>
-                    { click ? 
-                    <img src={mobileClose} alt="icon-close"/> 
-                    : <img src={mobileMenu} alt="icon-hamburger"/>
-                    }
-                </MobileIcon>
-            </NavContainer>
-        </Nav>
+        <div style={{
+            position: 'sticky',
+            top: '0',
+            zIndex: '999'
+        }}>
+            <div style={{
+            position: 'absolute',
+            width: '100%',
+            height: '80px'
+        }}>
+            <Nav>
+                <NavBlur/>
+                    <NavContainer>
+                        <NavLogo to='/'>
+                            <NavIcon/>
+                        </NavLogo>
+                        <NavMenu onClick={handleClick} click={click}>
+                            <NavItem>
+                                <NavLinks to='/pricing'>
+                                    Pricing
+                                </NavLinks>
+                            </NavItem>
+                            <NavItem>
+                                <NavLinks to='/product'>
+                                    Product
+                                </NavLinks>
+                            </NavItem>
+                            <NavItem>
+                                <NavLinks to='/about-us'>
+                                    About Us
+                                </NavLinks>
+                            </NavItem>
+                            <NavItem>
+                                <NavLinks to='/careers'>
+                                    Careers
+                                </NavLinks>
+                            </NavItem>
+                            <NavItem>
+                                <NavLinks to='/community'>
+                                    Community
+                                </NavLinks>
+                            </NavItem>
+                        </NavMenu>
+                        <NavButton>
+                            <ButtonLink to='/get-started'>
+                                Get Started
+                            </ButtonLink>
+                        </NavButton>
+                        <MobileIcon onClick={handleClick}>
+                            { click ? 
+                            <img src={mobileClose} alt="icon-close"/> 
+                            : <img src={mobileMenu} alt="icon-hamburger"/>
+                            }
+                        </MobileIcon>
+                    </NavContainer>
+                </Nav>
+            </div>
+        </div>
     )
 }
 

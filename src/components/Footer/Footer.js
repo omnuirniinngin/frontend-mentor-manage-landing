@@ -11,7 +11,7 @@ function Footer({
             <FooterRow background>
                 <FooterContainer>
                     <FooterContainerRow>
-                        <SectionBoldTitle fontBig center style={{
+                        <SectionBoldTitle fontBig fontSmall center style={{
                             width: '60%'
                         }}>
                             {headLine}

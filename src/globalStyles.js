@@ -8,7 +8,6 @@ const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
     }
     body{
-        overflow-x: hidden;
         font-family: 'Be Vietnam', sans-serif;
         font-size: 16px;
     }
@@ -79,7 +78,7 @@ export const SectionSmallText = styled.p`
         text-align: ${({reCenter}) => (reCenter ? 'center' : 'start')};
     }
     @media (max-width: 500px){
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 `
 
@@ -99,7 +98,7 @@ export const SectionBoldTitle = styled.p`
         padding-right: 0;
     }
     @media (max-width: 500px){
-        font-size: ${({fontBig}) => (fontBig ? '2.5rem' : '1.1rem')};
+        font-size: ${({fontSmall}) => (fontSmall ? '1.8rem' : '1rem')};
     }
 `
 

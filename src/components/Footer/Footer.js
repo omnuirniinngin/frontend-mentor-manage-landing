@@ -85,6 +85,21 @@ function Footer({
                     </FooterContainerRow>
                 </FooterContainer>
             </FooterRow>
+            <FooterRow background style={{
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                flexDirection: 'column'
+            }}>
+            Challenge by:<a href="https://www.frontendmentor.io?ref=challenge" target="_blank" style={{
+                textDecoration: 'none',
+                color: '#fff'
+            }}>Frontend Mentor</a>
+            Coded by:<a href="https://github.com/omnuirniinngin" style={{
+                textDecoration: 'none',
+                color: '#fff'
+            }}>Niño Muring</a>
+            </FooterRow>
         </FooterSection>
     )
 }
